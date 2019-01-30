@@ -8,6 +8,7 @@ body {
     background-color: #2196f3;
     padding: 10px;
   }
+
   .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
@@ -16,6 +17,7 @@ body {
     text-align: center;
     vertical-align: middle;
   }
+
   .question{
     font-family: 'Lobster';
     font-size:60px;
@@ -24,7 +26,7 @@ body {
   h1 {
     font-family: 'Lobster';
     font-size:60px;
-  
+    text-align: center;
   }
   h2{
     font-family: 'Crete Round';

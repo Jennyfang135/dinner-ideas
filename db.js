@@ -4,7 +4,7 @@ const connection = require('knex')(config)
 
 module.exports = {
   getFoodCategory: getFoodCategory,
- 
+  getFoodItemList: getFoodItemList
 }
 
 function getFoodCategory (db = connection) {
@@ -13,6 +13,8 @@ function getFoodCategory (db = connection) {
 
 function getFoodItemList(id, db=connection){
   return db('foodItemList')
-    .where('foodItemList.id', id)
-    .select();
+    .join('foodCategory', 'foodCategory.id', '=', 'foodItemList.foodCategory_id')
+    .where('foodCategory_id', id) 
+    .select('foodCategory.id as categoryId', 'foodItemList.id as itemId',
+    'foodCategory.name as categoryName', 'foodName', 'foodItemList.image')
 }

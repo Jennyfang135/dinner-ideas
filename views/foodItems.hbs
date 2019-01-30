@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food List</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Lobster" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="../styles.css" media="screen" />
+  </head>
+  <body>
+    <h1>Here are some Yummy Recipes for {{categoryName}}</h1>
+    <hr> 
+    <div class="grid-container">     
+      {{#each items}}    
+        <div class="grid-item">
+        <a href = '/category/{{categoryId}}/{{itemId}}'>{{foodName}}</a></div>
+        <div class="grid-item"><img src='../images/{{image}}'></div>
+      {{/each}}
+    </div>
+  </body>
+</html>
