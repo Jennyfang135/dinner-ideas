@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('foodItemList').insert([
-        {id: 1, foodCategory_id: 1, foodName: 'roast-Chicken', image: 'roastChicken.jpg', recipeURL:'https://www.radionz.co.nz/collections/recipes/roast-chicken-with-herbs-and-lemon'},
+        {id: 1, foodCategory_id: 1, foodName: 'roast-Chicken', image: 'roastChicken.jpg', recipeURL:'https://www.tegel.co.nz/recipes/perfect-roast-chicken-dinner/?utm_source=google&utm_medium=cpc'},
         {id: 2, foodCategory_id: 1, foodName:'tariyaki-Chicken', image:'tariyakiChicken.jpg', recipeURL: 'https://rasamalaysia.com/chicken-teriyaki-recipe'}   
       ]);
     });

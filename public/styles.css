@@ -64,3 +64,8 @@ body {
     margin: 4px 2px;
     cursor: pointer;
   }
+
+  #category image {
+    width: 200px;
+    height:25px;
+  } 

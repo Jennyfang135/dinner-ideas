@@ -12,8 +12,9 @@
       {{#each foodCategory}} 
         <div class="grid-item">
         <a href ='/category/{{id}}'}>{{name}}</a></div>
-        <div class="grid-item"><img src='images/{{image}}'></div>
+        <div class="grid-item"><img src='../images/{{image}}'></div>
       {{/each}}
     </div>
-  </body>
+    <hr>
+    <button class="btn" onclick="location.href ='/add'";>Add New Food Type</button>
 </html>
