@@ -30,3 +30,7 @@
   .content {
     flex: 3;
   }
+
+  .itemDetails {
+    align-content: center;
+  }

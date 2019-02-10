@@ -22,7 +22,7 @@ class FoodItemDetails extends React.Component{
                 <h2> Would you like to try this menu?</h2>
                 <div>   
                     <h3><li>{this.state.itemName}</li></h3>
-                    <ul>
+                    <ul>                        
                         {this.state.menuDetails.map(item=>
                         <div>
                             <li><img src={`../../images/${item.image}`}></img></li>
