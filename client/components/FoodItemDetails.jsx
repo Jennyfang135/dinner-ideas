@@ -1,19 +1,18 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import {getItemDetails} from '../api'
 
 class FoodItemDetails extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            name:  props.match.params.name,
-            foodItem: props.match.params.foodItem,
-            menuDetails:{}    
+            menuDetails:[],
+            name: props.match.params.name,
+            itemName:props.match.params.foodItem
         }
     }
 
     componentDidMount(){
-        getItemDetails(this.name, this.foodItem)
+        getItemDetails(this.state.name, this.state.itemName)
         .then(menuDetails=>this.setState({menuDetails}))
         .catch(err=>console.error('error',err))
     }
@@ -21,15 +20,16 @@ class FoodItemDetails extends React.Component{
         return(
             <div className='itemDetails'>
                 <h2> Would you like to try this menu?</h2>
-
-                {console.log('name in categoryList', this.props.name)}
-                {this.state.foodItem.map(item=>
-                   <div>
-                    <li><h3>{item.foodName}</h3></li>
-                    <li><img src={`../../images/${item.image}`}></img></li>
-                    <li><iframe src={{recipeURL}} height="600" width="1000"></iframe></li>
-                   </div> 
-                )}
+                <div>   
+                    <h3><li>{this.state.itemName}</li></h3>
+                    <ul>
+                        {this.state.menuDetails.map(item=>
+                        <div>
+                            <li><img src={`../../images/${item.image}`}></img></li>
+                            <li><iframe src={item.recipeURL} height="600" width="800"></iframe></li> 
+                        </div>)}
+                    </ul>
+                </div> 
             </div>
         ) 
     }     

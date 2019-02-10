@@ -15,7 +15,7 @@ export function getCategoryList (name){
      .catch(err=>console.log(err)) 
 }
 
-export function getItemDetails(name, itemName){
+export function getItemDetails(name,itemName){
     return request
         .get(`${categoryUrl}/category/${name}/${itemName}`)
         .then(detail => {return detail.body})

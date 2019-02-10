@@ -16,7 +16,7 @@ const App=() => {
           <Route path='/' component={Nav} />
           <div className='content'>
             <Route exact path ='/' component ={Home}/> 
-            <Route path='/category/:name' component={CategoryList} />
+            <Route exact path='/category/:name' component={CategoryList} />
             <Route path='/category/:name/:foodItem' component={FoodItemDetails} />
           </div>
         </div>

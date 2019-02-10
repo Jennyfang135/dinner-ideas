@@ -24,9 +24,9 @@ class CategoryList extends React.Component{
                 <ul>
                 {this.state.categoryList.map(item=>
                    <div>
-                    <li><h3><Link to={`/category/${item.name}`}>{capitalize(item.foodName)}</Link></h3></li>
+                    <li><h3><Link to={`/category/${item.categoryName}/${item.foodName}`}>{capitalize(item.foodName)}</Link></h3></li>
                     <li><img src={`../../images/${item.image}`}></img></li>
-                   </div> 
+                   </div>  
                 )}
                 </ul>
             </div>
