@@ -2234,12 +2234,7 @@ var Nav = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactRouterDom.Link,
                                 { to: '/category/' + item.name },
-                                _react2.default.createElement(
-                                    'h3',
-                                    null,
-                                    (0, _utilities.capitalize)(item.name)
-                                ),
-                                ' '
+                                (0, _utilities.capitalize)(item.name)
                             )
                         );
                     })
@@ -26533,9 +26528,9 @@ var App = function App() {
       'div',
       { className: 'app' },
       _react2.default.createElement(
-        'h1',
-        null,
-        'What\'s for dinner tonight'
+        'p',
+        { 'class': 'topRight' },
+        '"What\'s for dinner tonight"'
       ),
       _react2.default.createElement('hr', null),
       _react2.default.createElement(
@@ -29110,20 +29105,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Home = function Home() {
     return _react2.default.createElement(
         'div',
-        { className: 'home' },
+        { className: 'background' },
         _react2.default.createElement(
-            'h2',
-            null,
-            'Let\'s find out'
-        ),
-        _react2.default.createElement(
-            'h2',
-            null,
-            'Please select a category from the category List'
+            'div',
+            { 'class': 'transbox' },
+            _react2.default.createElement(
+                'p',
+                null,
+                'Dinner usually refers to the most significant meal of the day, which can be at noon or in the evening.In Chinese culture, dinner also means family time, we sit around at a round table, and share the news or interesting topics. For me, dinner is not only filling up your stomch, it also warming up our hearts.'
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                'This is my personal dinner recipes App which I will store all my favourite recipes.'
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                'What would you like for dinner today? '
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                'Click on the food category on your left and find out!'
+            )
         )
     );
 };
-
 exports.default = Home;
 
 /***/ }),
@@ -31377,11 +31385,7 @@ var FoodItemDetails = function (_React$Component) {
                     _react2.default.createElement(
                         'h3',
                         null,
-                        _react2.default.createElement(
-                            'li',
-                            null,
-                            this.state.itemName
-                        )
+                        this.state.itemName
                     ),
                     _react2.default.createElement(
                         'ul',

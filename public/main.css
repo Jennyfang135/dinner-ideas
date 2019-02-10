@@ -1,20 +1,23 @@
 
   h1 {
-      font-family: 'Lobster';
-      font-size:60px;
+    font-family: 'Dancing Script', cursive;
+      font-size:50px;
+      color: darkblue;
+      text-shadow: 10px -10px 6px #ff00ff;
       text-align: center;
-      background-image: url(./images/foodCollection.jpg);
-      color: darkgreen
   }
 
   h2 {
-    font-family:'Lobster';
-    font-size:40px;
+    font-family: 'Dancing Script', cursive;
+    font-size:35px;
   }
 
   h3 {
-    font-family: 'Lobster';
-    font-size:25px;
+    font-family: 'Dancing Script', cursive;
+    font-size:35px;
+    color:red;
+    font-weight: bold;
+    font-style: oblique;
   }
   
   .container {
@@ -22,9 +25,11 @@
   }
   
   .nav {
-    margin-right: 100px;
-    background-color: lightblue;
+    font-family: 'Dancing Script', cursive;
+    margin-right: 30px;
+    background-color: #DDA0DD;
     padding:20px;
+    font-size:30px;
   }
   
   .content {
@@ -34,3 +39,54 @@
   .itemDetails {
     align-content: center;
   }
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    color: #2F4F4F
+  }
+
+  .topRight {
+    font-size: 80px;
+    background-image: url(./images/food1.jpg);
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    text-shadow: 10px -10px 6px #ff00ff;
+    text-align: center;
+  }
+
+  .home {
+    background-image: url(./images/yummy-font.jpg);
+    color: black;
+    padding:20px;
+    font-size:30px;
+    font-family: 'Dancing Script', cursive;
+    align-content: center;
+  }
+
+  div.background {
+    background: url(./images/food3.jpg);
+    padding:30px;
+    font-size:35px;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  div.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+  }
+  
+  div.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color:#800080;
+  }
+
+  a {
+    text-decoration: none;
+    }

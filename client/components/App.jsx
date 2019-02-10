@@ -10,7 +10,7 @@ const App=() => {
   return ( 
     <Router>
       <div className ='app'>
-        <h1>What's for dinner tonight</h1>
+        <p class='topRight'>"What's for dinner tonight"</p>
         <hr/>
         <div className ='container'>
           <Route path='/' component={Nav} />

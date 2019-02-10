@@ -21,7 +21,7 @@ class Nav extends React.Component{
                 <h2> Food Category</h2>
                 <ul>
                  {this.state.category.map(item =>
-                 <li><Link to = {`/category/${item.name}`} ><h3>{capitalize(item.name)}</h3> </Link></li>)}
+                 <li><Link to = {`/category/${item.name}`} >{capitalize(item.name)}</Link></li>)}
                 </ul> 
             </div>
         )

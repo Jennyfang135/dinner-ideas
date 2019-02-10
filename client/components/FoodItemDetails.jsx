@@ -21,13 +21,14 @@ class FoodItemDetails extends React.Component{
             <div className='itemDetails'>
                 <h2> Would you like to try this menu?</h2>
                 <div>   
-                    <h3><li>{this.state.itemName}</li></h3>
+                    <h3>{this.state.itemName}</h3>
                     <ul>                        
                         {this.state.menuDetails.map(item=>
-                        <div>
-                            <li><img src={`../../images/${item.image}`}></img></li>
-                            <li><iframe src={item.recipeURL} height="600" width="800"></iframe></li> 
-                        </div>)}
+                            <div>
+                                {<li><img src={`../../images/${item.image}`}></img></li> }
+                                <li><iframe src={item.recipeURL} height="600" width="800"></iframe></li> 
+                            </div>
+                        )}
                     </ul>
                 </div> 
             </div>
