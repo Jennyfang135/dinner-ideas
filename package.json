@@ -1,34 +1,51 @@
 {
-  "name": "boilerplate-knex",
-  "version": "0.1.4",
-  "description": "Express boilerplate with Knex.js",
-  "main": "index.js",
+  "name": "dinner-idea",
+  "version": "0.2.1",
+  "description": "A React demo with web APIs",
+  "repository": "https://github.com/dev-academy-challenges/react-to-web-api.git",
+  "main": "server/index.js",
   "scripts": {
-    "knex": "knex",
-    "dev": "nodemon index",
-    "start": "node index",
-    "test": "jest"
+    "dev": "nodemon --watch server & webpack --watch",
+    "dev-client": "webpack-dev-server --hot --inline --content-base public",
+    "dev-server": "nodemon --watch server",
+    "test": "jest --watchAll",
+    "start": "node server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dev-academy-challenges/boilerplate-knex.git"
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "jest": {
+    "setupFiles": [
+      "./tests/client/setup-dom.js"
+    ]
   },
   "author": "EDA",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dev-academy-challenges/boilerplate-knex/issues"
-  },
-  "homepage": "https://github.com/dev-academy-challenges/boilerplate-knex#readme",
-  "dependencies": {
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "knex": "^0.15.2",
-    "nodemon": "^1.18.3",
-    "sqlite3": "^4.0.2"
-  },
   "devDependencies": {
-    "cheerio": "0.22.0",
-    "jest": "^23.5",
-    "supertest": "^3.1.0"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.1.4",
+    "jsdom": "^11.6.2",
+    "nodemon": "^1.14.12",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "supertest": "^3.0.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.2",
+    "knex": "^0.16.3",
+    "react-router-dom": "^4.3.1",
+    "sqlite3": "^4.0.4",
+    "superagent": "^3.8.2"
   }
 }

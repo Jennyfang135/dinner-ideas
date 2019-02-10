@@ -7,7 +7,8 @@ module.exports = {
   getFoodItemList: getFoodItemList,
   getMenu: getMenu,
   addCategory: addCategory,
-  getCategoryName: getCategoryName
+  getCategoryName: getCategoryName,
+  getCategoryIdByName: getCategoryIdByName
 }
 
 function getFoodCategory (db = connection) {
@@ -19,6 +20,12 @@ function getCategoryName(id, db = connection){
   .where('id',id)
   .select()
 }
+
+function getCategoryIdByName(name, db= connection){
+  return db('foodCategory')
+  .where('name', name)
+  .select('id')
+}
 function getFoodItemList(id, db=connection){
   return db('foodItemList')
     .join('foodCategory', 'foodCategory.id', '=', 'foodItemList.foodCategory_id')
@@ -27,9 +34,9 @@ function getFoodItemList(id, db=connection){
     'foodCategory.name as categoryName', 'foodName', 'foodItemList.image')
 }
 
-function getMenu(id, db=connection){
+function getMenu(itemName, db=connection){
   return db('foodItemList')
-    .where('foodItemList.id', id) 
+    .where('foodItemList.foodName', itemName) 
     .select('foodCategory_id as categoryId', 'foodItemList.id as itemId', 'foodName', 
     'foodItemList.image', 'recipeURL')
    

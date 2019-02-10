@@ -1,0 +1,32 @@
+
+  h1 {
+      font-family: 'Lobster';
+      font-size:60px;
+      text-align: center;
+      background-image: url(./images/foodCollection.jpg);
+      color: darkgreen
+  }
+
+  h2 {
+    font-family:'Lobster';
+    font-size:40px;
+  }
+
+  h3 {
+    font-family: 'Lobster';
+    font-size:25px;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .nav {
+    margin-right: 100px;
+    background-color: lightblue;
+    padding:20px;
+  }
+  
+  .content {
+    flex: 3;
+  }
