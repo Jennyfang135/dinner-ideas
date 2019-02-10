@@ -7,7 +7,6 @@ const router = express.Router()
 router.get('/category', (req, res) => {
   db.getFoodCategory()
     .then(foodcategory => {
-      //console.log('foodCategory',foodCategory)
       res.json(foodcategory)
     })
     .catch(err => {
@@ -16,15 +15,11 @@ router.get('/category', (req, res) => {
 })
 
 router.get('/category/:name', (req, res) => {
- // console.log("i am on server side category")
   const name = req.params.name
- // console.log('foodname',name)
   db.getCategoryIdByName(name)
   .then(item=>{
- // console.log('id i need', item)
     db.getFoodItemList(item[0].id)
     .then(items => {
-     console.log('items',items)
       res.json(items)
     })
     .catch(err => {
@@ -33,12 +28,9 @@ router.get('/category/:name', (req, res) => {
   })
 })
 router.get('/category/:name/:itemName', (req, res)=>{
-  console.log("i am on server side details")
   const itemName = req.params.itemName
-  console.log('itemName',itemName)
   db.getMenu(itemName)
   .then(menu =>{
-    console.log('menu',menu)
     res.json(menu)
   })
   .catch(err =>{
