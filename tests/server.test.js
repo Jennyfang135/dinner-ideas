@@ -15,7 +15,7 @@ const server = require('../server')
 
 test('GET /', () => {
   return request(server)
-    .get('/')
+    .get('/category')
     .expect(200)
     .then((res) => {
       const $ = cheerio.load(res.text)
