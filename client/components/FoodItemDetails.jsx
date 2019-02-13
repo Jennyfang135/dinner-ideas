@@ -1,5 +1,6 @@
 import React from 'react'
 import {getItemDetails} from '../api'
+import Comments from './Comments'
 
 class FoodItemDetails extends React.Component{
     constructor(props){
@@ -31,6 +32,7 @@ class FoodItemDetails extends React.Component{
                         )}
                     </ul>
                 </div> 
+               
             </div>
         ) 
     }     

@@ -10,7 +10,7 @@ const Home =() =>{
                     which can be at noon or in the evening.In Chinese culture, 
                     dinner also means family time, we sit around at a round table, 
                     and share the news or interesting topics. For me, dinner is
-                    not only filling up your stomch, it also warming up our hearts.
+                    not only filling up my stomach, it's also warming up my heart.
                 </p>
                 <p>This is my personal dinner recipes App which I will store all my 
                     favourite recipes.</p>

@@ -29108,7 +29108,7 @@ var Home = function Home() {
             _react2.default.createElement(
                 'p',
                 null,
-                'Dinner usually refers to the most significant meal of the day, which can be at noon or in the evening.In Chinese culture, dinner also means family time, we sit around at a round table, and share the news or interesting topics. For me, dinner is not only filling up your stomch, it also warming up our hearts.'
+                'Dinner usually refers to the most significant meal of the day, which can be at noon or in the evening.In Chinese culture, dinner also means family time, we sit around at a round table, and share the news or interesting topics. For me, dinner is not only filling up my stomach, it\'s also warming up my heart.'
             ),
             _react2.default.createElement(
                 'p',
@@ -31297,6 +31297,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _api = __webpack_require__(17);
 
+var _Comments = __webpack_require__(76);
+
+var _Comments2 = _interopRequireDefault(_Comments);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -31380,6 +31384,96 @@ var FoodItemDetails = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = FoodItemDetails;
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Comments = function (_React$Component) {
+    _inherits(Comments, _React$Component);
+
+    function Comments(props) {
+        _classCallCheck(this, Comments);
+
+        var _this = _possibleConstructorReturn(this, (Comments.__proto__ || Object.getPrototypeOf(Comments)).call(this, props));
+
+        _this.state = { currentComment: '',
+            comments: [] };
+        _this.handleChange = _this.handleChange.bind(_this);
+        _this.handleSubmit = _this.handleSubmit.bind(_this);
+        return _this;
+    }
+
+    _createClass(Comments, [{
+        key: 'handleChange',
+        value: function handleChange(event) {
+            this.setState({ currentComment: event.target.value });
+        }
+    }, {
+        key: 'handleSubmit',
+        value: function handleSubmit(event) {
+            var comments = [].concat(_toConsumableArray(this.state.comments), [currentComment]);
+            this.setState({ comments: comments });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(
+                    'form',
+                    { onSubmit: this.handleSubmit },
+                    _react2.default.createElement(
+                        'label',
+                        null,
+                        'Leave your comments:'
+                    ),
+                    _react2.default.createElement('input', { type: 'text', name: 'comment', onClick: this.handleChange }),
+                    _react2.default.createElement('input', { type: 'submit', value: 'Submit' })
+                ),
+                _react2.default.createElement(
+                    'div',
+                    null,
+                    this.state.comments.map(function (comment) {
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            comment
+                        );
+                    })
+                )
+            );
+        }
+    }]);
+
+    return Comments;
+}(_react2.default.Component);
+
+exports.default = Comments;
 
 /***/ })
 /******/ ]);
